@@ -1,0 +1,58 @@
+better prompt: -->> 
+
+Act as a beginner-friendly Python instructor.
+Context:
+I understand variables, conditionals, and loops.
+I am currently learning Python functions.
+Task:
+Explain what return does in a function.
+Show a simple example.
+Explain why return is useful.
+Give me a simple analogy.
+Tell me one common mistake beginners make.
+Give me one practice question.
+Format:
+Use simple English.
+Use short sections.
+Include one small code example.
+Do not provide the answer to the practice question.
+Explaining Python functions for an academy lesson.
+Explaining Python functions for an academy lesson.
+
+---------------------
+
+What return Does
+return sends a value out of a function back to the place where the function was called. It also ends the function right away.
+
+Simple Example
+python
+def add(a, b):
+    result = a + b
+    return result
+
+total = add(3, 4)
+print(total)  # 7
+Here, add(3, 4) gives back 7, and we save it in total.
+
+Why return Is Useful
+You can save the result in a variable and use it later.
+You can use the result in other calculations.
+Your function does one job (calculate), and you decide what to do with the answer (print it, store it, and so on).
+Simple Analogy
+Think of a function like a vending machine. You put in money and press a button (the arguments). The machine gives you a snack (the return value). You can eat it, share it, or save it for later.
+
+Common Beginner Mistake
+Using print() instead of return:
+
+python
+def add(a, b):
+    print(a + b)   # shows the number, but gives nothing back
+
+x = add(3, 4)
+print(x)  # None
+print only shows a value on the screen. return gives it back so your code can use it. Without return, the function gives back None.
+
+Practice Question
+Write a function called double that takes one number and returns that number multiplied by 2. Then call it with the number 5 and save the result in a variable.
+
+Try it yourself, and send me your code if you'd like feedback!

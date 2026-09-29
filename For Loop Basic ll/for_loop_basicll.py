@@ -1,10 +1,22 @@
 def biggie_size(type_list):
     for i in range(len(type_list)):
-        type_list[i]
+        
         if type_list[i] > 0:
             type_list[i] = "big"
     return type_list
 print(biggie_size([-1, 3, 5, -5])) 
+
+
+def reverse_num(minus):
+    for i in range(len(minus)):
+        if i % 2 == 0:
+            print(len(5, 2, -1))
+
+for i in range(5, 2, -1):
+    print(i)
+
+    
+    
 
 
 

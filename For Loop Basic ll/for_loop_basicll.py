@@ -12,7 +12,7 @@ def reverse_num(minus):
         if i % 2 == 0:
             print(len(5, 2, -1))
 
-for i in range(5, 2, -1):
+for i in range(4, -2, -2):
     print(i)
 
     

@@ -5,12 +5,22 @@ class Animal:
         self.health = health
         self.happiness = happiness
 
+    
     def display_info(self):
         print(f"This animal's is {self.name}, and age is {self.age}, health level is {self.health}, happiness level is {self.happiness}")
 
     def feed(self):
         self.health += 15
         self.happiness += 15
+        return self
+
+class Bear(Animal):
+    def __init__(self, name, age, health=100, happiness=100):
+        super().__init__(name, age, health, happiness)
+        
+    def feed(self):
+        self.health -= 15
+        self.happiness -= 15
         return self
 
 class Lion(Animal):

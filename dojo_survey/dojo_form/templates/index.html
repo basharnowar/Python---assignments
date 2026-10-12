@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo survey</title>
+</head>
+<body>
+    <form action="/result/" method="post">
+        {% csrf_token %}
+    <p>your name: <input type="text" name="name"></p>
+    <p>dojo location: <input type="text" name="location"></p>
+    <p>favorite language: <input type="text" name="language"></p>
+    <textarea>comment</textarea>
+    <button type="submit">Submit</button>
+    <input type="hidden" name="forms" value="forms">
+    </form>
+</body>
+</html>

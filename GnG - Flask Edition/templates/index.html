@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GnG</title>
+</head>
+
+<body>
+    <title>Great Number Game!</title>
+    </head>
+
+    <body>
+        <h1>Welcome to the Great Number Game!</h1>
+        <p>I am thinking of a number between 1 to 100</p>
+        <p>Take a guess</p>
+
+        <br>
+
+        <form action="/guess" method="post">
+            <input type="number" name="guess" min="1" max="100" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if session['result'] %}
+        <p>{{ session['result'] }}</p>
+        {% endif %}
+
+        {% if session['won'] %}
+        <a href="/reset">Play again!</a>
+        {% endif %}
+    </body>
+
+</html>

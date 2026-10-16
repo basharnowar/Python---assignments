@@ -1,0 +1,42 @@
+I checked the code, before using Ai, or any help, from eye contact in the VScode, the code looks fine
+and I run the code in the browser it works also great, the routes /summary & the redirect works great 
+in clear items are going back to add more , the only thing i notice was and not sure about it honestly is
+the /order route it didn't work and it get me an error , I tried to debug it , and i figure it out maybe 
+because there was a (return redirect (/summary)) however it also didn't redirect me in the /summary 
+
+
+After asking Ai and using the prompt, I got more errors than I was able to detect, which was a mind blowing 
+he separated what's necessary and which it wasn't and optinal , I accepted most of the necessary 
+
+what he suggested such as:/order should be POST-only - GET currently gives a 400 error (Accepted)
+
+which I fully agree with him in POST since we get error and GET reveal the information which we don't want that
+
+Ai Suggest: /clear becomes a POST form - GET shouldn’t change data (accepted)
+
+Same we need POST here , not GET so our data don't change
+
+Ai Suggest: Format money with two decimals - Fixes $2.0 (Reject)
+
+it's one of Ai suggest about Format money and I reject it, since it's unnecessary whether it was decimal or not 
+because 2.0 is being printed anyway
+
+
+I checked after his work, and checked the /order route, if it works or not, and now it change to (method not allowed)
+and when I confront him and told him about he give me a reasonable explanination that i'm convinced 
+
+#################################################################################################################
+
+I checked after your work, and "/order" says now (Method not allowed) i caught you ;)
+
+Explaining that the expected error confirms the test worked.
+Explaining that the expected error confirms the test worked.
+
+Ha, you caught me doing exactly what I said I’d do 😄 That’s the expected result, and it was the second item in my quick tests: typing /order in the address bar should give “405 Method Not Allowed”. So it means the fix is working.
+
+When you type a URL, the browser sends a GET request. The route now only accepts POST, so Flask refuses the GET, which is the “honest answer” I described. Before, it allowed GET but crashed with a 400 error because there was no form data. Now it says clearly that the method isn’t allowed.
+
+The real order flow is unaffected. Clicking “Add Tea” on the menu page sends a POST, so it still works.
+
+If you’d rather have a friendlier page than a 405, there’s an optional change: allow GET on /order and just redirect to /. I’d leave it as is, because 405 is correct behavior and a user will almost never type that URL by hand. Tell me if you want the redirect.
+
